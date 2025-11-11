@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MALIBU - Salão de Beleza</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+  <nav class="top-nav">
+    <div class="brand">
+      <img src="img/logo.ico" alt="Logo Malibu" class="logo">
+      <span class="slogan">Transforme seu momento em um verdadeiro cuidado.</span>
+    </div>
+    <ul class="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#agendamento">Agendar</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="sobre">
+  <h2>Sobre Nós</h2>
+  <p>
+    O <strong>Salão Malibu</strong> nasceu para oferecer experiências únicas em beleza, estilo e bem-estar.  
+    Nossa missão é realçar a autoestima de cada cliente com atendimento humanizado e serviços de qualidade.  
+    Contamos com especialistas em <em>cabelo</em>, <em>unhas</em> e <em>maquiagem</em>, sempre atualizadas com as últimas tendências.
+  </p>
+</section>
+
+<section id="servicos">
+  <h2>Serviços & Valores</h2>
+  <div class="servicos-grid">
+    
+    <div class="servico-card">
+      <h3>Manicure</h3>
+      <ul>
+        <li>Pé: R$35,00</li>
+        <li>Mão: R$30,00</li>
+        <li>Pé + Mão (promo): R$60,00</li>
+      </ul>
+    </div>
+
+    <div class="servico-card">
+      <h3>Cabeleireira</h3>
+      <ul>
+        <li>Penteados: R$100,00 a R$200,00</li>
+        <li>Hidratação: R$100,00</li>
+        <li>Progressiva: R$300,00</li>
+        <li>Escova: R$100,00</li>
+        <li>Cronograma (4 sábados): R$300,00</li>
+      </ul>
+    </div>
+
+    <div class="servico-card">
+      <h3>Maquiagem</h3>
+      <ul>
+        <li>Festa: R$300,00</li>
+        <li>Básico: R$150,00</li>
+      </ul>
+    </div>
+
+    <div class="servico-card destaque">
+      <h3>Promoção 🎉</h3>
+      <h4>Penteado + Make = <strong>R$350,00</strong></h4>
+    </div>
+
+  </div>
+</section>
+
+<section id="agendamento">
+  <h2>Agende seu horário</h2>
+  <form id="form-agendamento">
+    <label>Seu Nome:
+      <input type="text" name="nome" required>
+    </label>
+    <label>Telefone:
+      <input type="tel" name="telefone" required>
+    </label>
+    <label>Serviço:
+      <select name="servico" required>
+        <option value="">Selecione...</option>
+        <optgroup label="Manicure - Giovanna">
+          <option value="Pé">Pé</option>
+          <option value="Mão">Mão</option>
+          <option value="Pé + Mão">Pé + Mão</option>
+        </optgroup>
+        <optgroup label="Cabelo - Yasmin">
+          <option value="Penteados">Penteados</option>
+          <option value="Hidratação">Hidratação</option>
+          <option value="Progressiva">Progressiva</option>
+          <option value="Escova">Escova</option>
+          <option value="Cronograma">Cronograma</option>
+        </optgroup>
+        <optgroup label="Maquiagem - Marina">
+          <option value="Festa">Festa</option>
+          <option value="Básico">Básico</option>
+        </optgroup>
+        <optgroup label="Promoção">
+          <option value="Penteado + Make">Penteado + Make</option>
+        </optgroup>
+      </select>
+    </label>
+    <button type="submit">Solicitar Horário</button>
+        <p style="margin-top: 10px; font-size: 0.9rem; color:#666;">Aguarde o retorno via WhatsApp</p>
+  </form>
+</section>
+
+<section id="feedback">
+  <h2>Feedback dos Clientes</h2>
+
+  <form id="form-feedback">
+    <label>Seu Nome:
+      <input type="text" name="nomeFeedback" required>
+    </label>
+
+    <label>Avaliação:</label>
+    <div class="stars" id="star-rating">
+      <span class="star" data-value="1">★</span>
+      <span class="star" data-value="2">★</span>
+      <span class="star" data-value="3">★</span>
+      <span class="star" data-value="4">★</span>
+      <span class="star" data-value="5">★</span>
+    </div>
+    <input type="hidden" name="estrela" id="estrelaSelecionada" required>
+
+    <label>Sobre quem/qual serviço?</label>
+    <select name="referencia" required>
+      <option value="Site">Nossas Profissionais</option>
+      <option value="Yasmin (Cabelo)">Yasmin (Cabelo)</option>
+      <option value="Giovanna (Unha)">Giovanna (Unha)</option>
+      <option value="Mariana (Maquiagem)">Mariana (Maquiagem)</option>
+    </select>
+
+    <label>Comentário:</label>
+    <textarea name="comentario" rows="3" required></textarea>
+
+    <button type="submit">Enviar Feedback</button>
+  </form>
+
+  <div id="lista-feedbacks"></div>
+</section>
+
+<!-- Contato -->
+<section id="contato">
+    <h2>Entre em Contato</h2>
+    <div class="contact-links">
+          <a href="https://www.instagram.com/malibu_beautysp" target="_blank" class="instagram">
+            <i class="fab fa-instagram"></i> @malibu_beautysp
+          </a>
+        </div>
+
+</section>
+
+<footer>
+  <p>© 3ºA - Thomas - Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
